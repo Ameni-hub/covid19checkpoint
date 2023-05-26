@@ -52,31 +52,31 @@ plt.title('Box Plot')
 
 
 import numpy as np
-Q3 =  df3['confirmed'].quantile(0.75)
-Q1 = df3['confirmed'].quantile(0.25)
+Q3 =  df2['confirmed'].quantile(0.75)
+Q1 = df2['confirmed'].quantile(0.25)
 IQR = Q3 - Q1
-df3['confirmed'] = np.where(df3['confirmed']> Q3 + 1.5 * IQR, Q3, df3['confirmed'])
+df2['confirmed'] = np.where(df2['confirmed']> Q3 + 1.5 * IQR, Q3, df2['confirmed'])
 plt.boxplot(df2['confirmed'])
-Q3 =  df3['latestBy'].quantile(0.75)
-Q1 =  df3['latestBy'].quantile(0.25)
+Q3 =  df2['latestBy'].quantile(0.75)
+Q1 =  df2['latestBy'].quantile(0.25)
 IQR = Q3 - Q1
-df3['latestBy'] = np.where(df3['latestBy']> Q3 + 1.5 * IQR, Q3, df3['latestBy'])
+df2['latestBy'] = np.where(df2['latestBy']> Q3 + 1.5 * IQR, Q3, df2['latestBy'])
 plt.boxplot(df2['latestBy'])
-Q3 =  df3['confirmedRate'].quantile(0.75)
-Q1 =  df3['confirmedRate'].quantile(0.25)
+Q3 =  df2['confirmedRate'].quantile(0.75)
+Q1 =  df2['confirmedRate'].quantile(0.25)
 IQR = Q3 - Q1
-df3['confirmedRate'] = np.where(df3['confirmedRate']> Q3 + 1.5 * IQR, Q3, df3['confirmedRate'])
-plt.boxplot(df3['confirmedRate'])
-Q3 =  df3['deathNew'].quantile(0.75)
-Q1 =  df3['deathNew'].quantile(0.25)
+df2['confirmedRate'] = np.where(df2['confirmedRate']> Q3 + 1.5 * IQR, Q3, df2['confirmedRate'])
+plt.boxplot(df2['confirmedRate'])
+Q3 =  df2['deathNew'].quantile(0.75)
+Q1 =  df2['deathNew'].quantile(0.25)
 IQR = Q3 - Q1
-df3['deathNew'] = np.where(df3['deathNew']> Q3 + 1.5 * IQR, Q3, df3['deathNew'])
-plt.boxplot(df3['deathNew'])
-Q3 =  df3['death'].quantile(0.75)
-Q1 =  df3['death'].quantile(0.25)
+df2['deathNew'] = np.where(df2['deathNew']> Q3 + 1.5 * IQR, Q3, df2['deathNew'])
+plt.boxplot(df2['deathNew'])
+Q3 =  df2['death'].quantile(0.75)
+Q1 =  df2['death'].quantile(0.25)
 IQR = Q3 - Q1
-df3['death'] = np.where(df3['death']> Q3 + 1.5 * IQR, Q3, df3['death'])
-plt.boxplot(df3['death'])
+df2['death'] = np.where(df2['death']> Q3 + 1.5 * IQR, Q3, df2['death'])
+plt.boxplot(df2['death'])
 import pandas as pd
 
 # Assuming you have a DataFrame named 'data' with the specified columns and date index
